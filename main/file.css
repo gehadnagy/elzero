@@ -1244,4 +1244,248 @@ font-weight: 900;
     top: 105px;
 }
  /* end pricing */
+ /* start video */
+ .video  {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+ }
+ .video .holder {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: var(--section-background);
+ }
+ @media (max-width: 767px) {
+    .video .holder {
+        flex-direction: column;
+    }
+ }
+ .video .holder .lest {
+    min-width: 300px;
+    background: white;
+    border: 1px solid var(--section-background);
+ }
+ .video .holder .lest .name {
+    position: relative;
+    padding: 20px;
+    background: #f4f4f4;
+    font-size: 19px;
+    font-weight: 900;
+    color: var(--main-color);
+ }
+ .video .holder .lest .name i {
+    position: absolute;
+    right: 27px;
+    font-size: 17px;
+    top: 23px;
+ }
+ .video .holder .lest ul li{
+    padding: 20px;
+    border-top: 1px solid var(--section-background);
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.video .holder .lest ul li:hover {
+    background-color: #f5f4f4;
+    color: var(--main-color);
+}
+.video .holder .lest ul li span{
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    color: #777;
+}
+.video .holder .auto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+}
+.video .holder .auto img {
+    max-width: 100%;
+}
+.video .holder .auto .info {
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+}
+ /* end video */
+ /* start stats */
+ .stats {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+    background-size: cover;
+    background-image: url(../imgs/stats.jpg);
+ }
+ .stats::before {
+    content: "";
+    position: absolute;
+     background-color: white;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     opacity: .8;
+ }
+ .stats h2 {
+    font-size: 34px;
+    color: black;
+    position: relative;
+    text-align: center;
+    margin: 0 auto 50px;
+    text-transform: capitalize;
+ }
+ .stats .container {
+ position: relative;
+ display: grid;
+ grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+ gap: 20px;
+}
+ .stats .box {
+    padding: 18px 53px;
+    background: rgb(255 255 255 / 80%);
+    text-align: center;
+    position: relative;
+ }
+ .stats .box::after,
+ .stats .box::before {
+    content: "" ;
+    width: 2px;
+    position: absolute;
+    height: 0;
+    background: var(--main-color);
+    transition: 1s;
+}
+ .stats .box::after {
+ right: 0;
+ top: 0;
+ }
+ .stats .box::before {
+ bottom: 0;
+ left: 0;
+ }
+ .stats .box:hover::after,
+ .stats .box:hover::before {
+ height: 100%;
+ }
+ .stats .box i {
+    width: 100%;
+    padding: 8px;
+ }
+ .stats .box span:first-of-type {
+    width: 100%;
+    display: block;
+    font-size: 48px;
+    font-weight: bold;
+    padding: 10px;
+ }
+ .stats .box span:last-of-type {
+    width: 100%;
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
+    font-style: italic;
+    color: var(--main-color);
+    text-transform: capitalize;
+ }
+ /* end stats */
+ /* start discount */
+ .discount {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+ }
+ .discount .image {
+    flex-basis: 50%;
+    background-image: url(../imgs/discount-background1.jpg);
+    background-size: cover;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    animation: change-cover 10s linear infinite;
+    -webkit-animation: change-cover 10s linear infinite;
+}
+@media (max-width: 991px) {
+    .discount .image {
+        flex-basis: 100%;
+    }
+}
+@keyframes change-cover {
+ 100% {
+    background-image: url(../imgs/discount-background2.jpg);
+ }
+}
+ .discount .image::before {
+    content: "";
+    position: absolute;
+    background: rgb(33 150 243 / 97%);
+    width: 100%;
+    height: 100%;
+ }
+ .discount .image .content {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 0 21px
+ }
+ .discount .image .content h3 {
+    font-size: 40px;
+ }
+ .discount .image .content p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 500px;
+    padding: 20px 0;
+ }
+ .discount .image .content img {
+    max-width: 200px;
+ }
+ .discount .form {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ @media (max-width: 991px) {
+    .discount .form {
+        flex-basis: 100%;
+    }
+} 
+ .discount .form .content h3 {
+    text-align: center;
+    font-size: 35px;
+    text-transform: capitalize;
+ }
+ .discount .form .content form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  
+ }
+ .discount .form .content form .input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: #f9f9f9;
+    padding: 15px;
+    text-transform: capitalize;
+    width: 100%;
+    display: block;
+    caret-color: var(--main-color);
+ }
+ .discount .form .content form .input:focus {
+    outline: none;
+ }
+ .discount .form .content form input[type="submit"] {
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background: var(--main-color);
+    color: white;
+}
+ /* end discount */
 

@@ -6,6 +6,7 @@ html {
 }
 body {
     font-family: 'Cairo', sans-serif;
+    
 }
 :root { 
  --main-color: #2196f3;  
@@ -87,6 +88,36 @@ a {
     animation: drop-left .5s linear forwards;
     -webkit-animation: drop-left .5s linear forwards;
 }
+.separator {
+ position: relative;
+}
+.separator::after {
+content: "";
+position: absolute;
+right: 0;
+top: -100px;
+width: 100%;
+height: 30px;
+background-image: linear-gradient(135deg , white 25% , transparent 25%) , linear-gradient(225deg, white 24%, transparent 25%);
+z-index: 1;
+background-size: 30px 30px;
+}
+.dots {
+background-image: url(../imgs/dots.png);
+position: absolute;
+background-repeat: no-repeat;
+width: 203px;
+height: 187px;
+}
+.dots-down {
+  bottom: 200px;
+  left: 0;
+}
+.dots-up {
+    top: 200px;
+    right: 0;
+}
+/*  */
 @keyframes drop-right {
  50% {
     width: 12px;
@@ -1592,5 +1623,12 @@ margin: 0 0 20px;
     width: 76px;
     border: 4px solid white;
     margin: 2px;
+}
+p.copyright {
+    color: white;
+    padding: 30px 10px;
+    text-align: center;
+    font-size: 15px;
+    border-top: 1px solid #777;
 }
 /* end footer */
